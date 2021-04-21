@@ -32,9 +32,9 @@ add-highlighter shared/vala/inline_documentation region /// $ fill documentation
 add-highlighter shared/vala/line_comment region // $ fill comment
 
 add-highlighter shared/vala/code/ regex %{\b(this|true|false|null)\b} 0:value
-add-highlighter shared/vala/code/ regex "\b(void|int|char|unsigned|float|bool|double|string)\b" 0:type
-add-highlighter shared/vala/code/ regex "\b(while|for|if|else|do|static|switch|case|default|class|interface|enum|goto|break|continue|return|import|try|catch|throw|new|package|extends|implements|throws|instanceof|var|using)\b" 0:keyword
-add-highlighter shared/vala/code/ regex "\b(final|public|protected|private|abstract|synchronized|native|transient|volatile)\b" 0:attribute
+add-highlighter shared/vala/code/ regex "\b(void|int|uint|char|unichar|unsigned|float|bool|double|string|long|short|ushort)\b" 0:type
+add-highlighter shared/vala/code/ regex "\b(while|for|foreach|if|else|do|static|switch|case|default|class|interface|enum|goto|break|continue|return|import|try|catch|throw|new|package|extends|implements|throws|instanceof|var|using|throw|delete)\b" 0:keyword
+add-highlighter shared/vala/code/ regex "\b(final|public|protected|private|abstract|synchronized|native|transient|volatile|unowned|delegate|namespace|struct|enum|internal|this|static|signal|get|set|virtual)\b" 0:attribute
 add-highlighter shared/vala/code/ regex "(?<!\w)@\w+\b" 0:meta
 add-highlighter shared/vala/code/ regex %{(?i)(?<!\.)\b[1-9]('?\d+)*(ul?l?|ll?u?)?\b(?!\.)} 0:value
 add-highlighter shared/vala/code/ regex %{(?i)(?<!\.)\b0b[01]('?[01]+)*(ul?l?|ll?u?)?\b(?!\.)} 0:value
